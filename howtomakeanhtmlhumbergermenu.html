@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mobile menu</title>
+  <style type="text/css">
+    
+    
+.topnav {
+  overflow: hidden;
+  background-color: #ddd;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+
+.topnav a.icon {
+  background: yellow;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+.topnav a:hover {
+  background-color: red;
+  color: black;
+}
+
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">DSC</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="#news">Profile</a>
+    <a href="#contact">Team</a>
+    <a href="#about">About DSC</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="thisFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<script type="text/javascript">
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function thisFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
